@@ -1,6 +1,6 @@
 import axios from 'axios';
-
-const API_KEY = 'AIzaSyBChtpfxdTTuHGV_UY1-i6EpBhC03-1K1M';
+import dotenv from 'dotenv'
+const API_KEY = import.meta.API_KEY ||'AIzaSyBChtpfxdTTuHGV_UY1-i6EpBhC03-1K1M';
 const API_URL =     `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
 
 export async function generateResponse(queryType, branch, semester, userInput) {
